@@ -4,6 +4,10 @@ Follow the instructions below to get started!
 
 ## Getting Started
 
+Ensure you have a recent version of Node.js installed.
+
+Install the dependencies using npm or yarn.
+
 First, run the development server:
 
 ```bash
