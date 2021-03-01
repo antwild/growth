@@ -1,6 +1,7 @@
 import React from "react";
 
 import style from "./ConnectorHero.module.css";
+import Link from 'next/link';
 
 const ConnectorHero = ({ connector }) => {
   return (
@@ -12,17 +13,21 @@ const ConnectorHero = ({ connector }) => {
         <div className={style.content}>
           <div>
             <h1 className={style.title}>
-              {connector.name} integration + automation
+              {connector.name_0} and {connector.name_1} integration + automation
             </h1>
             <p className={style.subtitle}>
-              {connector.name} integrations couldn’t be easier with the Tray
-              Platform’s robust {connector.name} connector, which connects any
+            {connector.name_0} and {connector.name_1} integrations couldn’t be easier with the Tray
+              Platform’s robust {connector.name_0} and {connector.name_1} connector, which connects any
               services without the need for separate integration tools.
             </p>
-            <button>Try our {connector.name} connector</button>
+            <Link href="https://tray.io/lp/get/demo-multi">
+              <button>Get a demo</button>
+            </Link>
           </div>
           <div className={style.connectorIconContainer}>
-            <img src={connector.logo} className={style.connectorIcon} />
+            <img src={connector.logo_0} className={style.connectorIcon} />
+            <div className={style.plus}>+</div>
+            <img src={connector.logo_1} className={style.connectorIcon} />
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import Head from "next/head";
 import ConnectorHero from "../../components/ConnectorHero";
 import PageCta from "../../components/PageCta";
 import AppStream from "../../components/AppStream";
+import ConnectorSteps from "../../components/ConnectorSteps";
 import data from "../api/data.json";
 
 const DEFAULT_CONNECTORS = data.connectors;
@@ -42,7 +43,7 @@ export default function Connector() {
           textAlign: "center",
         }}
       >
-        <h3>Add your new component here!</h3>
+        <ConnectorSteps connector={currentConnector} />
       </div>
 
       <AppStream connectors={DEFAULT_CONNECTORS} />

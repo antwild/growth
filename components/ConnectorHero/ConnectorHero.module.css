@@ -2,6 +2,14 @@
   background-color: #f7f7f9;
   width: 100%;
   padding: 2em;
+  min-height: calc(100vh - 14em);
+  border-bottom-left-radius: 400px;
+}
+
+@media screen and (min-width: 1600px) {
+  .ConnectorHero {
+    padding-top: calc(80px + 2em);
+  }
 }
 
 .container {
@@ -24,9 +32,11 @@
   align-items: center;
   gap: 4em;
   grid-template-columns: 1fr 1fr;
-  margin-top: 1em;
+  margin-top: 3em;
 }
 .content .title {
+  font-family: var(--brand-brown-font);
+  font-weight: 300;
   font-size: 3em;
   line-height: 1em;
   margin: 0;
@@ -45,6 +55,7 @@
 .content button:hover {
   background-color: var(--color-blue-hover);
   cursor: pointer;
+  transition: 0.3s ease,color 0.3s ease,border 0.3s ease;
 }
 
 .connectorIconContainer {
@@ -57,4 +68,10 @@
   max-width: 150px;
   width: 100%;
   height: auto;
+}
+
+.plus {
+  color: #0d66e5;
+  font-weight: 900;
+  font-size: 3.275em;
 }

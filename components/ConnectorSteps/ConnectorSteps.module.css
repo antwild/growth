@@ -1,0 +1,47 @@
+.stepsContainer {
+    display: grid;
+    grid-template-columns: 0fr 0fr 0fr 0fr 0fr;
+    grid-template-rows: auto auto;
+    height: 4.4em;
+    justify-content: center;
+}
+
+.stepBorder {
+    border: 1px solid black;
+    padding: .8em;
+    border-radius: .5em;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    width: 4.5em;
+}
+
+.barBorder {
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+}
+
+.bar {
+    height: 5px;
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    background-color: #0d66e5;
+}
+
+.stepIconContain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepIcon {
+    max-width:100%;
+    max-height:100%;
+}
+
+.stepName {
+    font-size: 12px;
+    margin-top: 3px;
+}
