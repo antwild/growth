@@ -6,6 +6,30 @@ Please see my completed task for Growth Engineering.
 
 Directions for running on localhost as follows:
 
+Navigate to https://github.com/antwild/growth and clone the repo or download directly from https://github.com/antwild/growth/archive/main.zip
+
+Ensure you have a recent version of Node.js installed.
+
+Unzip and navigate to the folder.
+
+Install the dependencies using npm or yarn.
+
+Then, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+finally, navigate to 
+
+### http://localhost:3000/connectors/integrations/{service1-service2}
+
+Where service 1 and service 2 are connector services, such as 
+
+### http://localhost:3000/connectors/integrations/slack-monday
+
 ## The tasks
 
 I've broken down the test into four parts - the <strong>component</strong>, the <strong>web page</strong>, the overall <strong>design</strong> and a few <strong>extra touches</strong>. 
