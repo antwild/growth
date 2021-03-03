@@ -23,13 +23,15 @@ const findConnectors = (slug) => {
     const sfdc = DEFAULT_CONNECTORS[0];
     const asana = DEFAULT_CONNECTORS[1];
 
-    // Find and render requested services in page and child components, using SDFC as service one
-    // fallback and Asana as the service two fallback
+    // Find and render requested services in page and child components, using SDFC as a
+    // fallback if the service in the URL isn't found in data.json
     const obj = DEFAULT_CONNECTORS.filter((connector) => connector.slug === slugConnector); 
     if(!obj[0]){
       filteredConnectors[`name_${ind}`] = sfdc.name;
       filteredConnectors[`slug_${ind}`] = sfdc.slug;
       filteredConnectors[`logo_${ind}`] = sfdc.logo;
+      // To avoid Salesforce appearing for both services when both incorrect,
+      // the second will fallback to Asana
       if(ind == 1 && filteredConnectors["name_0"] === "Salesforce"){
         filteredConnectors[`name_${ind}`] = asana.name;
         filteredConnectors[`slug_${ind}`] = asana.slug;

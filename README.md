@@ -81,14 +81,14 @@ I've also added a "{service 1} and {service 2} Solutions" section, which makes u
 
 #### What else?
 
-- As this route is dynamically created, for a non technical user to add any service they would just need to add the object to the data.json file using the same "name", "slug", "logo" key/value pairs all other services are using.
+- As this route is dynamically created, I would explain to a non technical user that if they wished to add any service (not already included in `data.json`) they would need to add an object to the `data.json` file using the same `"name"`, `"slug"` and `"logo"` key/value pairs for any additional services.
 
 - Tests for this web page would include:
 
-* Testing the different combinations of services for the slug, which should render the correct page in the correct order - eg. "monday-shopify" should render service one as Monday.com and service two as Shopify.
+  * Testing the different combinations of services in the slug, which should render the correct page in the correct order. The expectation is that the first service in the URL should be the first service rendered wherever the two appear together as a logo or name. Eg, "monday-shopify" should render the Monday.com logo first (on the left) and the Shopify logo second (right).
 
-* Testing what happens if a slug does not match a service in the data.json file.
+  * Testing what happens if a service in the URL does not match a service in the data.json file (eg, `slack-firebase` is mistyped as `dlack-firebase`). The expectation is that the service rendered reverts to Salesforce - [example](http://localhost:3000/connectors/integrations/dlack-firebase). If however both services in the URL are unmatched, the first service will be Salesforce and the second will be Asana - [example](http://localhost:3000/connectors/integrations/dlack-direbase).
 
-- With more time, I'd like to implement that the manual trigger in the component to be interactive, that would trigger the animation on click, with an explanation appearing as the bar runs.
+- With more time, I'd like to implement that the manual trigger in the component to be interactive, that would trigger the animation on click, with an explanation of the data transfer it represents appearing on screen as the bar animation runs.
 
-I'd also like to GET the operations reference for each connector and implement that into this page for a prospect to browse.
+- I'd also like to GET the operations reference for each connector and implement that into this page for a prospect to browse, similar to the service documentation page.
