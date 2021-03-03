@@ -87,7 +87,7 @@ I've also added a "{service 1} and {service 2} Solutions" section, which makes u
 
   * Testing the different combinations of services in the slug, which should render the correct page in the correct order. The expectation is that the first service in the URL should be the first service rendered wherever the two appear together as a logo or name. Eg, "monday-shopify" should render the Monday.com logo first (on the left) and the Shopify logo second (right).
 
-  * Testing what happens if a service in the URL does not match a service in the data.json file (eg, `slack-firebase` is mistyped as `dlack-firebase`). The expectation is that the service rendered reverts to Salesforce - [example](http://localhost:3000/connectors/integrations/dlack-firebase). If however both services in the URL are unmatched, the first service will be Salesforce and the second will be Asana - [example](http://localhost:3000/connectors/integrations/dlack-direbase).
+  * Testing what happens if a service in the URL does not match a service in the data.json file (eg, `zoom-hubspot` is mistyped as `xoom-hubspot`). The expectation is that the service rendered reverts to Salesforce - [example](http://localhost:3000/connectors/integrations/xoom-hubspot). If however both services in the URL are unmatched, the first service will be Salesforce and the second will be Asana - [example](http://localhost:3000/connectors/integrations/xoom-bubspot).
 
 - With more time, I'd like to implement that the manual trigger in the component to be interactive, that would trigger the animation on click, with an explanation of the data transfer it represents appearing on screen as the bar animation runs.
 
